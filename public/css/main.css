@@ -1,0 +1,199 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden;
+}
+
+/* navbar */
+nav{
+    display: flex;
+    background-color: rgb(45, 73, 100);
+    color: rgb(192, 206, 206);
+    justify-content: space-between;
+    /* padding: 1em 1.2em; */
+    height: 3em;
+    padding: 0 1.3em;
+    align-items: center;
+}
+
+nav .logo{
+	margin-top: 0.2em;
+    letter-spacing: 2px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content:flex-end;
+	margin-top: 1em;
+}
+
+nav ul li{
+	margin: 1em;
+	margin-top: 0em;
+	margin-bottom: 0;
+	padding: 0.5em;
+	height: 3em;
+	vertical-align: middle;
+}
+
+nav ul  li  a{
+    text-decoration: none;
+    color: rgb(192, 206, 206);
+	vertical-align: middle;
+}
+
+nav ul li:hover{
+	background-color: white;
+	color: rgb(45, 73, 100);
+}
+
+nav ul li a:hover{
+	color: rgb(45, 73, 100);
+}
+
+/* hamburger */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -6px;
+    top: -3px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(192, 206, 206);
+    transition: all 0.5s;
+}
+
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+
+
+/* image */
+.gambar{
+    padding-top: 200px;
+    background-attachment: fixed;
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 1)), url("https://smulweb-infra-smulwebbackendpublicbucket7daa1a81-1um3gn7obc0l4.s3.eu-central-1.amazonaws.com/public/sites/default/files/recipe-images/sate_4.jpg?5gszZ9Ku01iVWmmAy1IRxYH6hssNQ9_U");
+}
+
+.judul{
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+}
+
+/* content */
+.resep{
+    display: flex;
+}
+
+.content{
+  color: rgb(50, 122, 230);
+  border: 2px solid;
+}
+
+.content img{
+    margin-top: 1em;
+}
+
+.masakan h3{
+    margin-top: 1.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid;
+}
+
+.masakan p{
+    margin-top: 1em;
+    color: black;
+}
+
+/* footer */
+.footer{
+  margin-top: 3em;
+background-color: rgb(30, 59, 85);
+height: 3em;
+position: relative;
+clear: both;
+box-sizing: border-box;
+display: inline-block;
+width: 100%;
+background-attachment: fixed;
+}
+
+.copyright{
+  color: white;
+  text-align: center;
+  margin-top: 1em;
+}
+
+/* responsive */
+/* tablet */
+@media screen and (max-width: 900px) {
+    nav ul{
+        width: 60%;
+    }
+}
+
+/* hp */
+@media screen and (max-width: 650px) {
+    .menu-toggle{
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        background-color: rgb(45, 73, 100);
+        right: 0;
+        top: 2em;
+        height: 70vh;
+        width: 40%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+
+    nav ul.slide{
+        transform: translateX(0);
+    }
+}
