@@ -62,3 +62,18 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+*********--------------**************-----------
+Cara penggunaan aplikasi
+1. Login menggunakan email dan password (pastikan klik pada bagian tulisan button agar dapat berjalan sebagai mestinya) 
+2. Apabila anda tidak memiliki akun, maka dapat klik tombol create akun. 
+3. Ketika Anda sudah membuat akun, anda akan diarahkan ke menu login kembali.
+4. Setelah berhasil login, anda akan diarahkan ke menu main. 
+5. Anda dapat menambahkan resep masakan anda pada bagian nambah. 
+6. Pada form tambah resep, isi setiap form dengan jelas dan maksimal kata adalah 255.
+7. Untuk upload resep, pastikan anda mengklik button "TIDAK" Pada bagian tulisan upload agar form yang telah diisi dapat disimpan pada database. 
+8. Setelah upload resep, anda akan kembali diarahkan ke main. 
+6.
